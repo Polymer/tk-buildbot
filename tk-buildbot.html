@@ -1,4 +1,6 @@
-<link rel="import" href="../../toolkit-ui/elements/g-ajax.html">
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer-ajax/polymer-ajax.html">
+
 <polymer-element name="tk-buildbot">
   <template>
     <style>
@@ -61,7 +63,7 @@
         margin-right: 5px;
       }
     </style>
-    <g-ajax id="bbot" handleAs="json" on-response="{{response}}"></g-ajax>
+    <polymer-ajax id="bbot" handleAs="json" on-response="{{response}}"></polymer-ajax>
     <div class="badge" on-click="{{toggleDetails}}">
       <span class="builder">{{builder}}</span>
       <span class="result {{result.resultStr}}">{{result.resultStr}}</span>
